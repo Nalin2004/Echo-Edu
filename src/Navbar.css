@@ -1,0 +1,141 @@
+html { scroll-behavior: smooth; }
+
+.navbar {
+  background-color: #E6F7FF !important;
+  color: #006570;
+  padding: 10px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: lexend;
+  flex-shrink: 0;
+}
+
+.navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 50px;
+  font-family: lexend;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #006570;
+  transition: width 0.3s ease;
+}
+
+.navbar-item:hover::after { width: 100%; }
+.navbar-item:hover { color: #38abba; }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-username {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: #0f6b6f;
+  font-weight: 500;
+}
+
+.tier-badge {
+  font-family: 'Lexend', sans-serif;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.tier-badge.free {
+  background: #e8f7f8;
+  color: #0f6b6f;
+  border: 1px solid #b0dde2;
+}
+
+.tier-badge.premium {
+  background: linear-gradient(135deg, #ffd400, #ffb700);
+  color: #073c3f;
+  border: none;
+}
+
+.navbar-btn-outline {
+  background: transparent;
+  border: 1.5px solid #0f6b6f;
+  color: #0f6b6f;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.navbar-btn-outline:hover {
+  background: #0f6b6f;
+  color: white;
+}
+
+.navbar-item1 {
+  background-color: #0f6b6f;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 25px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s ease;
+  border: none;
+  list-style: none;
+}
+
+.navbar-item1:hover { background-color: #0c5a5e; }
