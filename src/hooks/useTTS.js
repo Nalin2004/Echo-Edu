@@ -1,6 +1,9 @@
 import { useCallback, useRef, useState } from 'react';
 
-const API_BASE = 'http://localhost:3001/api';
+// In production: set VITE_API_BASE to your Render backend URL
+// e.g. https://echoedu-server.onrender.com/api
+// Locally: falls back to http://localhost:3001/api
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3001/api';
 
 // ─── Text cleaning for TTS ────────────────────────────────────────────────────
 /**

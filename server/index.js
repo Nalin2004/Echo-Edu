@@ -29,7 +29,10 @@ const LANG_TO_VOICE = {
 
 const DEFAULT_VOICE = 'en-IN-NeerjaNeural';
 
-app.use(cors({ origin: ['http://localhost:5173', 'http://127.0.0.1:5173'] }));
+app.use(cors({
+  origin: (origin, callback) => callback(null, true), // allow any origin (Vercel, localhost, etc.)
+  credentials: true,
+}));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb' }));
 
