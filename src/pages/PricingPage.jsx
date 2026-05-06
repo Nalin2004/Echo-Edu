@@ -4,33 +4,33 @@ import LanguageSelector from '../components/LanguageSelector';
 import { useTranslation } from '../hooks/useTranslation';
 import './PricingPage.css';
 
-const ACCESSIBILITY_PLANS = {
-  cognitive: {
-    label: 'Cognitive Disabilities',
-    needs: ['Complex text', 'Too much information at once', 'Distractions'],
-    features: ['Simple mode UI', 'Text simplification', 'Focus mode', 'Icons + visuals'],
-  },
-  lowVision: {
-    label: 'Low vision / Elderly',
-    needs: ['Better visibility, not full audio'],
-    features: ['High contrast mode', 'Font size control', 'Dark/light themes', 'Zoom support'],
-  },
-  hardOfHearing: {
-    label: 'Hard of Hearing',
-    needs: ['Partial audio support'],
-    features: ['Captions', 'Adjustable audio speed', 'Volume boost', 'Clarity controls'],
-  },
-  lowInternet: {
-    label: 'Limited Internet / Low Resources',
-    needs: ['No stable internet', 'Low-end devices'],
-    features: ['Offline mode', 'Low-data mode', 'Text-first fallback'],
-  },
-};
-
 export default function PricingPage() {
   const { user, upgradeToPremium } = useAuth();
   const navigate = useNavigate();
   const { t } = useTranslation();
+
+  const ACCESSIBILITY_PLANS = {
+    cognitive: {
+      label: t('Cognitive Disabilities'),
+      needs: [t('Complex text'), t('Too much information at once'), t('Distractions')],
+      features: [t('Simple mode UI'), t('Text simplification'), t('Focus mode'), t('Icons + visuals')],
+    },
+    lowVision: {
+      label: t('Low vision / Elderly'),
+      needs: [t('Better visibility, not full audio')],
+      features: [t('High contrast mode'), t('Font size control'), t('Dark/light themes'), t('Zoom support')],
+    },
+    hardOfHearing: {
+      label: t('Hard of Hearing'),
+      needs: [t('Partial audio support')],
+      features: [t('Captions'), t('Adjustable audio speed'), t('Volume boost'), t('Clarity controls')],
+    },
+    lowInternet: {
+      label: t('Limited Internet / Low Resources'),
+      needs: [t('No stable internet'), t('Low-end devices')],
+      features: [t('Offline mode'), t('Low-data mode'), t('Text-first fallback')],
+    },
+  };
 
   const handleUpgrade = () => {
     upgradeToPremium();
