@@ -1,0 +1,92 @@
+.lang-selector {
+  position: relative;
+  font-family: 'Lexend', sans-serif;
+  z-index: 1000;
+}
+
+.lang-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(15,107,111,0.35);
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 13px;
+  color: #0f6b6f;
+  cursor: pointer;
+  transition: 0.25s;
+  white-space: nowrap;
+}
+
+.lang-trigger:hover {
+  background: rgba(15,107,111,0.08);
+  border-color: #0f6b6f;
+}
+
+.lang-globe { font-size: 15px; }
+.lang-arrow { font-size: 10px; opacity: 0.6; }
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #fff;
+  border: 1.5px solid rgba(15,107,111,0.2);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  min-width: 190px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: left;
+  width: 100%;
+}
+
+.lang-option:hover {
+  background: #e8f7f8;
+}
+
+.lang-option.active {
+  background: #0f6b6f;
+  color: #fff;
+}
+
+.lang-native {
+  font-size: 15px;
+  font-weight: 500;
+  color: inherit;
+}
+
+.lang-english {
+  font-size: 12px;
+  color: #888;
+  font-family: 'Lexend', sans-serif;
+}
+
+.lang-option.active .lang-english {
+  color: rgba(255,255,255,0.7);
+}
+
+/* compact mode for inside forms */
+.lang-selector.compact .lang-trigger {
+  padding: 5px 10px;
+  font-size: 12px;
+}
